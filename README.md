@@ -1,6 +1,8 @@
 # PBL6---Darey.io
 ## CLIENT-SERVER ARCHITECTURE WITH MYSQL
 
+## Project Scope – Implement a Client Server Architecture using MySQL Database Management System (DBMS).
+
 # STEP 1 - Create and configure two Linux-based virtual servers (EC2 instances in AWS).
 
 Log in differently to the Client and Server terminals and prepare both
@@ -111,3 +113,19 @@ You might need to configure MySQL server to allow connections from remote hosts.
 *sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf*
 
 Replace ‘127.0.0.1’ to ‘0.0.0.0’ like this:
+
+![PBL6_4](https://user-images.githubusercontent.com/122687798/222624024-88a2f86f-e899-4f3d-9090-79210bbc1080.JPG)
+
+No restart MYSQL service
+
+sudo systemctl restart mysql
+
+Connect to the CLIENT terminal and run below command to connect to the User from the Client terminal.
+
+sudo mysql -u remote_user -h 54.174.117.10 -p
+
+![PBL6_5](https://user-images.githubusercontent.com/122687798/222627112-1911fbe3-d370-4854-b37e-4b49b707329b.jpg)
+
+# CONGRTULATIONS EZE
+You have Implemented a Client Server Architecture using MySQL Database Management System (DBMS)
+
