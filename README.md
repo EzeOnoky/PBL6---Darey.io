@@ -3,26 +3,49 @@
 
 ## Project Scope – Implement a Client Server Architecture using MySQL Database Management System (DBMS).
 
+#### Understanding Client-Server Architecture
+As you proceed your journey into the world of IT, you will begin to realise that certain concepts apply to many other areas. One of such concepts is – Client-Server architecture. Client-Server refers to an architecture in which two or more computers are connected together over a network to send and receive requests between one another. In their communication, each machine has its own role: the machine sending requests is usually referred as "Client" and the machine responding (serving) is called "Server". A simple diagram of Web Client-Server architecture is presented below:
+
+![PBL6_1a](https://user-images.githubusercontent.com/122687798/222628690-6f8001aa-08b6-4fb2-bf6c-27144e0814fd.JPG)
+
+In the example above, a machine that is trying to access a Web site using Web browser or simply ‘curl’ command is a client and it sends HTTP requests to a Web server (Apache, Nginx, IIS or any other) over the Internet. If we extend this concept further and add a Database Server to our architecture, we can get this picture:
+
+![PBL6_1a](https://user-images.githubusercontent.com/122687798/222629029-22cfb48b-7670-49b3-a935-ef58968f09ad.JPG)
+
+# So we start our handsOn
+
 # STEP 1 - Create and configure two Linux-based virtual servers (EC2 instances in AWS).
 
 Log in differently to the Client and Server terminals and prepare both
 
-## SERVER PREPARATION - On mysql server Linux Server install MySQL Server software.
-### Update Ubuntu Server from the Ubuntu Repository
-*sudo apt update -y*
-
-### Install MYSQL SERVER
-*sudo apt install mysql-server -y*
-
-### Enable MYSQL service
-*sudo systemctl enable mysql*
+# STEP 2 -  Install MYSQL CLIENT SOFTWARE
 
 # CLIENT PREPARATION - On mysql server Linux Client install MySQL Server software.
+
 ### Update Ubuntu Server from the Ubuntu Repository
+
 *sudo apt update -y*
 
 ### Install MYSQL CLIENT
+
 *sudo apt install mysql-client -y*
+
+
+# STEP 3 -  Install MYSQL SERVER, Enable the Server, Install MySQL Security Script on it
+
+## SERVER PREPARATION - On mysql server Linux Server install MySQL Server software.
+
+### Update Ubuntu Server from the Ubuntu Repository
+
+*sudo apt update -y*
+
+### Install MYSQL SERVER
+
+*sudo apt install mysql-server -y*
+
+### Enable MYSQL service
+
+*sudo systemctl enable mysql*
 
 ### Enable MYSQL service and Install MySQL Security Script
 *sudo systemctl enable mysql*
@@ -98,14 +121,9 @@ When you’re finished, test if you’re able to log in to the MySQL console by 
 Notice the -p flag in this command, which will prompt you for the password used after changing the root user password.
 
 To exit the MySQL console, type:
-
 *mysql> exit*
-
 ![PBL6_2](https://user-images.githubusercontent.com/122687798/222620277-678d7efb-0e8f-4bf2-8860-e5833895f184.jpg)
-
-
 Notice that you need to provide a password to connect as the root user. For increased security, it’s best to have dedicated user accounts with less expansive privileges set up for every database, especially if you plan on having multiple databases hosted on your server.
-
 ![PBL6_3](https://user-images.githubusercontent.com/122687798/222622853-73b3c863-cace-4fa3-b86c-5192958c1ce2.JPG)
 
 You might need to configure MySQL server to allow connections from remote hosts.
@@ -116,9 +134,11 @@ Replace ‘127.0.0.1’ to ‘0.0.0.0’ like this:
 
 ![PBL6_4](https://user-images.githubusercontent.com/122687798/222624024-88a2f86f-e899-4f3d-9090-79210bbc1080.JPG)
 
-No restart MYSQL service
+Now restart MYSQL service
 
 sudo systemctl restart mysql
+
+# STEP 4 -  Make connection attempt from the Client to the Server
 
 Connect to the CLIENT terminal and run below command to connect to the User from the Client terminal.
 
