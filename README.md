@@ -149,3 +149,7 @@ sudo mysql -u remote_user -h 54.174.117.10 -p
 # CONGRTULATIONS EZE
 You have Implemented a Client Server Architecture using MySQL Database Management System (DBMS)
 
+Further Reading
+https://www.w3schools.com/sql/default.asp
+https://www.youtube.com/watch?v=jSPslwhYEG0
+
