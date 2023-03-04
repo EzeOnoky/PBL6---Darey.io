@@ -1,4 +1,4 @@
-# PBL6---Darey.io
+# PBL5B - Darey.io
 ## CLIENT-SERVER ARCHITECTURE WITH MYSQL
 
 ## Project Scope – Implement a Client Server Architecture using MySQL Database Management System (DBMS).
