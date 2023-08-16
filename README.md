@@ -146,7 +146,7 @@ sudo mysql -u remote_user -h 54.174.117.10 -p
 
 ![PBL6_5](https://user-images.githubusercontent.com/122687798/222627112-1911fbe3-d370-4854-b37e-4b49b707329b.jpg)
 
-# CONGRTULATIONS EZE
+# CONGRATULATIONS EZE
 You have Implemented a Client Server Architecture using MySQL Database Management System (DBMS)
 
 Further Reading
